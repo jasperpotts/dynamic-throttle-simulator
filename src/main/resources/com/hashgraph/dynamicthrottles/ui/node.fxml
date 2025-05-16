@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.tilesfx.Tile?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane fx:id="nodeTitledPane" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="300.0" text="Node" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hashgraph.dynamicthrottles.ui.NodeUi">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Current Round" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="currentRoundLabel" text="0.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Ingested Transactions" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="ingestedTransactionsLabel" text="0.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" styleClass="title" text="PID" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="pidLabel" text="0.0" styleClass="small-value" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Tokens" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="currentTokensLabel" text="0.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Token Rate" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="currentTokenRateLabel" text="0.0" />
+               </children>
+            </HBox>
+            <Tile fx:id="incomingTransactionQueueChartTile" skinType="CUSTOM" textVisible="false"/>
+            <Tile fx:id="roundsToExecuteQueueChartTile" skinType="CUSTOM" textVisible="false" />
+            <Tile fx:id="healthChartTile" skinType="GAUGE2" textSize="BIGGER" threshold="80.0" title="Health" unit="\%">
+               <thresholdColor>
+                  <Color red="0.40582966804504395" green="0.6973684430122375" blue="0.2905701696872711" />
+               </thresholdColor>
+            </Tile>
+         </children>
+      </VBox>
+   </content>
+</TitledPane>

@@ -1,0 +1,105 @@
+.root {
+  -fx-font-family: "San Francisco";
+  -fx-base: #2a2a2a;
+  -fx-background-color: #2a2a2a;
+  -fx-font-size: 12px !important;
+}
+
+.tile .chart-title {
+  -fx-font-size: 18px !important;
+  -fx-font-weight: bold;
+}
+
+.tile {
+  -fx-font-size: 18px !important;
+}
+
+.simple-text-tile {
+  -fx-background-color: #2a2a2a;
+  -fx-border-radius: 4px;
+  -fx-padding: 4px 8px;
+  -fx-font-size: 14px;
+  /*-fx-font-weight: bold;*/
+  -fx-alignment: center ;
+}
+
+.simple-text-tile .title {
+  -fx-font-weight: light;
+}
+
+.simple-text-tile .small-value {
+  -fx-font-size: 11px;
+}
+
+
+/* ********************* Sparkline ********************* */
+.sparkline {
+  -fx-text-fill: white;
+  -fx-padding: 0px;
+}
+.sparkline .labelsBox {
+  -fx-padding: 0 10px 10px 10px;
+  -fx-spacing: 10px;
+}
+.sparkline AreaChart {
+  -fx-font-size: 8px;
+}
+.sparkline AreaChart .chart-plot-background {
+  -fx-background-color: none;
+}
+.sparkline .chart-series-line {
+  -fx-stroke-width: 2px;
+}
+.sparkline .axis {
+  -fx-tick-label-fill: white;
+  -fx-background: #AAA;
+}
+.sparkline .title {
+  -fx-font-size: 11px;
+  /*-fx-font-weight: 100;*/
+}
+.sparkline .value {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+}
+.sparkline .unit {
+  -fx-font-size: 9px;
+}
+
+#quorumHealthTile .sparkline .chart-series-area-line { -fx-stroke: CHART_COLOR_6; }
+#quorumHealthTile .sparkline .chart-series-area-fill { -fx-fill: CHART_COLOR_6_TRANS_20; }
+
+#tokenRateTile .sparkline .chart-series-area-line { -fx-stroke: CHART_COLOR_7; }
+#tokenRateTile .sparkline .chart-series-area-fill { -fx-fill: CHART_COLOR_7_TRANS_20; }
+
+.test {
+  cHART_COLOR_1: #f3622d;
+  CHART_COLOR_2: #fba71b;
+  CHART_COLOR_3: #57b757;
+  CHART_COLOR_4: #41a9c9;
+  CHART_COLOR_5: #4258c9;
+  CHART_COLOR_6: #9a42c8;
+  CHART_COLOR_7: #c84164;
+  CHART_COLOR_8: #888888;
+}
+
+/*.default-color0.chart-series-area-line { -fx-stroke: CHART_COLOR_1; }*/
+/*.default-color1.chart-series-area-line { -fx-stroke: CHART_COLOR_2; }*/
+/*.default-color2.chart-series-area-line { -fx-stroke: CHART_COLOR_3; }*/
+/*.default-color3.chart-series-area-line { -fx-stroke: CHART_COLOR_4; }*/
+/*.default-color4.chart-series-area-line { -fx-stroke: CHART_COLOR_5; }*/
+/*.default-color5.chart-series-area-line { -fx-stroke: CHART_COLOR_6; }*/
+/*.default-color6.chart-series-area-line { -fx-stroke: CHART_COLOR_7; }*/
+/*.default-color7.chart-series-area-line { -fx-stroke: CHART_COLOR_8; }*/
+/*.chart-series-area-fill {*/
+/*  -fx-stroke: null;*/
+/*  -fx-fill: CHART_COLOR_1_TRANS_20;*/
+/*}*/
+/*.default-color0.chart-series-area-fill { -fx-fill: CHART_COLOR_1_TRANS_20; }*/
+/*.default-color1.chart-series-area-fill { -fx-fill: CHART_COLOR_2_TRANS_20; }*/
+/*.default-color2.chart-series-area-fill { -fx-fill: CHART_COLOR_3_TRANS_20; }*/
+/*.default-color3.chart-series-area-fill { -fx-fill: CHART_COLOR_4_TRANS_20; }*/
+/*.default-color4.chart-series-area-fill { -fx-fill: CHART_COLOR_5_TRANS_20; }*/
+/*.default-color5.chart-series-area-fill { -fx-fill: CHART_COLOR_6_TRANS_20; }*/
+/*.default-color6.chart-series-area-fill { -fx-fill: CHART_COLOR_7_TRANS_20; }*/
+/*.default-color7.chart-series-area-fill { -fx-fill: CHART_COLOR_8_TRANS_20; }*/

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.tilesfx.Tile?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox prefHeight="567.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hashgraph.dynamicthrottles.ui.MainFrame">
+   <children>
+      <TitledPane animated="false" collapsible="false" text="Load Generator">
+         <content>
+            <HBox prefHeight="170.0" prefWidth="200.0" spacing="4.0" alignment="CENTER">
+               <children>
+                  <Tile fx:id="loadSliderTile" maxWidth="180.0" skinType="CUSTOM" textSize="BIGGER" title="Load"/>
+                  <Tile fx:id="loadGeneratorTpsTile" maxWidth="180.0" skinType="GAUGE2" textSize="BIGGER" title="TPS" unit="TPS" maxValue="50000"/>
+                  <Tile fx:id="loadGeneratorTpsChartTile" skinType="SMOOTH_AREA_CHART" textSize="BIGGER" title="TPS" />
+                  <Pane minWidth="-Infinity" prefHeight="100.0" prefWidth="20.0" />
+                  <Tile fx:id="loadGeneratorAcceptRejectTile" chartType="AREA" skinType="DONUT_CHART" textSize="BIGGER" title="Accepted vs Rejected %" />
+                  <Tile fx:id="loadGeneratorAcceptedChartTile" skinType="SMOOTH_AREA_CHART" textSize="BIGGER" title="Accepted %" />
+                  <Tile fx:id="loadGeneratorRejectedChartTile" skinType="SMOOTH_AREA_CHART" textSize="BIGGER" title="Rejected %" />
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" text="Consensus">
+         <content>
+            <HBox prefHeight="150.0" prefWidth="200.0" spacing="4.0" alignment="CENTER">
+               <children>
+                  <Tile fx:id="consenusQueueSizeChartTile" skinType="SMOOTH_AREA_CHART" textSize="BIGGER" title="Consensus Queue Size" />
+
+                  <VBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Rounds/s" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="roundsLabel" text="0.0" styleClass="small-value" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Events/s" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="eventsLabel" text="0.0" styleClass="small-value" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Transactions/s" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="transactionLabel" text="0.0" styleClass="small-value" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="simple-text-tile">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="title" text="Current Round No." HBox.hgrow="ALWAYS" />
+                              <Label fx:id="currentRoundLabel" text="0.0" styleClass="small-value" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Tile fx:id="transactionWorkNsInLastSecondChartTile" skinType="SMOOTH_AREA_CHART" textSize="BIGGER" title="Transaction Work" unit="seconds" />
+                  <Tile fx:id="quorumHealthTile" id="quorumHealthTile" skinType="CUSTOM" textVisible="false" prefWidth="450"/>
+                  <Tile fx:id="tokenRateTile" id="tokenRateTile" skinType="CUSTOM" textVisible="false" prefWidth="450"/>
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Nodes" VBox.vgrow="ALWAYS">
+         <content>
+            <HBox fx:id="nodesContainer" maxHeight="1.7976931348623157E308" prefHeight="400.0" prefWidth="200.0" spacing="4.0" />
+         </content>
+      </TitledPane>
+   </children>
+</VBox>
